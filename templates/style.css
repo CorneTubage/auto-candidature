@@ -1,0 +1,18 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+background: #c7c7c7;
+border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #a8a8a8;
+}
+.glass {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+}
