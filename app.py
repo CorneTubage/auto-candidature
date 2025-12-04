@@ -24,7 +24,7 @@ class Settings(db.Model):
     smtp_port = db.Column(db.Integer, default=465)
     smtp_email = db.Column(db.String(100), default="")
     smtp_password = db.Column(db.String(100), default="")
-    candidate_first_name = db.Column(db.String(50), default="Prénom")
+    candidate_first_name = db.Column(db.String(50), default="Prenom")
     candidate_last_name = db.Column(db.String(50), default="Nom")
     documents_path = db.Column(db.String(300), default=os.path.join(os.getcwd(), 'documents'))
     email_subject = db.Column(db.String(200), default="Candidature spontanée pour")
