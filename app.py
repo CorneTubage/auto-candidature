@@ -24,10 +24,10 @@ class Settings(db.Model):
     smtp_port = db.Column(db.Integer, default=465)
     smtp_email = db.Column(db.String(100), default="")
     smtp_password = db.Column(db.String(100), default="")
-    candidate_first_name = db.Column(db.String(50), default="Noé")
-    candidate_last_name = db.Column(db.String(50), default="Arhan")
+    candidate_first_name = db.Column(db.String(50), default="Prénom")
+    candidate_last_name = db.Column(db.String(50), default="Nom")
     documents_path = db.Column(db.String(300), default=os.path.join(os.getcwd(), 'documents'))
-    email_subject = db.Column(db.String(200), default="Candidature spontanée pour un stage en développement")
+    email_subject = db.Column(db.String(200), default="Candidature spontanée pour")
     email_body = db.Column(db.Text, default="""Bonjour,\n\nJe me permets de vous contacter...""")
 
 class Company(db.Model):
@@ -115,8 +115,8 @@ def handle_companies():
     
     settings = Settings.query.first()
     doc_path = settings.documents_path if settings else ""
-    fname = settings.candidate_first_name if settings else "Noé"
-    lname = settings.candidate_last_name if settings else "Arhan"
+    fname = settings.candidate_first_name if settings else "Prenom"
+    lname = settings.candidate_last_name if settings else "Nom"
     
     for c in companies:
         # Vérification intelligente des fichiers

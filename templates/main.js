@@ -173,8 +173,8 @@ function openPreview(id) {
   const subject =
     document.getElementById("conf-subject").value || "Candidature spontanée";
   let body = document.getElementById("conf-body").value || "Bonjour, ...";
-  const fname = document.getElementById("conf-fname").value || "Noé";
-  const lname = document.getElementById("conf-lname").value || "Arhan";
+  const fname = document.getElementById("conf-fname").value || "Prenom";
+  const lname = document.getElementById("conf-lname").value || "Nom";
 
   // 1. Remplir les champs textes
   document.getElementById("prev-email").innerText = company.email;
