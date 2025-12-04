@@ -1,6 +1,7 @@
 # Ignorer les dossiers
 documents/
 instance/
+venv/
 
 # Ignorer les fichiers sensibles
 MDP_APP.txt

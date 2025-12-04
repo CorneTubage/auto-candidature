@@ -39,6 +39,8 @@ Si votre CSS et JS ne chargent pas, déplacez main.js et style.css dans un dossi
 Ouvrez votre terminal dans le dossier job-automator et exécutez :
 
 ```
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
